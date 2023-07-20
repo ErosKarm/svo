@@ -1,9 +1,23 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 import styles from "./Hero.module.css";
 import Image from "next/image";
+import Popup from "../Popup";
 
 const Hero = () => {
+  const [openPopup, setOpenPopup] = useState(false);
+
+  const handleOpenPopup = () => {
+    console.log("this ran");
+    setOpenPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setOpenPopup(false);
+  };
+
   return (
     <section className={styles.hero}>
       <h1 className={styles.header}>Contact</h1>
@@ -51,11 +65,15 @@ const Hero = () => {
           </span>
         </div>
         <div className={styles.contact_actions}>
-          <button className={styles.action_btn}>Send Request</button>
+          <button className={styles.action_btn} onClick={handleOpenPopup}>
+            Send Request
+          </button>
           <button className={styles.action_btn}>Subscribe to newsletter</button>
           <button className={styles.action_btn}>Request a call</button>
         </div>
       </div>
+
+      <Popup isOpen={openPopup} closePopup={handleClosePopup} />
     </section>
   );
 };

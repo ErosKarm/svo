@@ -19,11 +19,11 @@
 }
 
 .tags {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   width: 50%;
   align-items: center;
   text-align: center;
-  display: flex;
-  justify-content: space-between;
 }
 
 .tags span {

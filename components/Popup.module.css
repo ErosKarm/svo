@@ -1,0 +1,87 @@
+.wrapper {
+  position: absolute;
+  position: fixed;
+  height: 100dvh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(163, 163, 163, 0.75);
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  justify-content: center;
+  gap: 2rem;
+  width: 600px;
+  height: 600px;
+}
+
+.input {
+  padding: 1.15rem 1rem;
+  border: none;
+  color: rgba(11, 106, 133, 1);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
+  text-transform: uppercase;
+  background-color: transparent;
+  background-image: url("../public/assets/images/contacts/inputPath.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.input:active {
+  border: none;
+}
+
+.input:focus-visible {
+  outline: none;
+}
+
+.input::placeholder {
+  color: rgba(11, 106, 133, 0.5);
+}
+
+.input_description:focus-visible {
+  outline: none;
+}
+
+.input_description {
+  color: rgba(11, 106, 133, 1);
+  height: 100%;
+  width: 100%;
+  border: 1px solid #0b6a85;
+  border-radius: 50px;
+
+  padding: 2rem 0.5rem;
+}
+
+.input[type="submit"] {
+  cursor: pointer;
+}
+.form_wrapper {
+  position: relative;
+}
+
+.close_icon {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  width: 40px;
+}
+
+.close_icon:hover {
+  cursor: pointer;
+}
