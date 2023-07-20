@@ -1,0 +1,43 @@
+.container {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 100dvh;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.nav_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 1rem;
+  list-style: none;
+  text-align: center;
+}
+
+.nav_item {
+  text-decoration: none;
+  font-size: 32px;
+  text-transform: uppercase;
+  padding: 2rem;
+}
+
+.nav_active {
+  background-image: url("../../public/assets/navPath.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.close_icon {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+}

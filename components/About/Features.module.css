@@ -1,0 +1,43 @@
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.challenges {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.challenges p {
+  color: #575757;
+  font-size: 20px;
+}
+
+.heading {
+  background-image: url("../../public/assets/images/about/headingUnderlinePath.svg");
+  margin: 0;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 0.75rem;
+  background-size: 40%;
+}
+
+.heading2 {
+  background-image: url("../../public/assets/images/about/headingUnderlinePath.svg");
+  margin: 0;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 0.75rem;
+  background-size: 60%;
+}

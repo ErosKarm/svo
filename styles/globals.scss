@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+$primary-font: "Roboto", sans-serif;
+$primary-color: rgba(64, 64, 64, 0.9);
+
+html {
+  font-family: $primary-font;
+  color: $primary-color;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden !important;
+  width: 100dvw;
+  margin: 0;
+}
+
+h1 {
+  font-size: 62px;
+  font-weight: 400;
+  line-height: 100%; /* 62px */
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #404040;
+  text-align: center;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 100%; /* 42px */
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #404040;
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 120%; /* 36px */
+  text-transform: uppercase;
+}
+
+h4 {
+  color: #0b6a85;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 24px */
+}
+
+p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+  letter-spacing: 0.32px;
+}
+
+span {
+  color: #525252;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
+  letter-spacing: 0.28px;
+}
+
+// custom scrollbar
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0b6a85;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2b2b2b;
+}

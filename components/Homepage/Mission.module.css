@@ -1,0 +1,101 @@
+.mission {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.mission_header {
+  text-transform: uppercase;
+}
+
+.mission_description {
+  width: 15%;
+  font-size: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+}
+
+.planePath {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+}
+
+.truckPath {
+  position: absolute;
+  width: 400px;
+  left: 60px;
+  top: 130px;
+}
+
+.handShake {
+  position: absolute;
+  top: 25rem;
+  width: 100%;
+  margin-top: 8rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .mission_description {
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+  }
+
+  .truckPath {
+    display: none;
+  }
+
+  .handShake {
+    margin-top: 0rem;
+  }
+
+  .planePath {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .mission_description {
+    width: 50%;
+  }
+
+  .truckPath {
+    width: 300px;
+  }
+
+  .handShake {
+    top: 18rem;
+  }
+
+  .planePath {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .mission_description {
+    width: 70%;
+  }
+
+  .truckPath {
+    width: 200px;
+  }
+
+  .handShake {
+    top: 12rem;
+  }
+
+  .planePath {
+    width: 200px;
+  }
+}

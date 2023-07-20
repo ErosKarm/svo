@@ -1,0 +1,32 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.services_additional {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  text-align: left;
+}
+
+.services_heading {
+  background-image: url("../../public/assets/images/services/headingUnderline.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding-bottom: 0.45rem;
+  margin: 0;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.services_description {
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 120%; /* 24px */
+  font-size: 20px;
+}

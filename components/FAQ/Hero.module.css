@@ -1,0 +1,151 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7rem;
+}
+
+.header {
+  color: #404040;
+  margin-bottom: 7rem;
+}
+
+.tags {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.tags_2 {
+  display: flex;
+  position: absolute;
+  left: 20px;
+  top: 120px;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.tags span {
+  color: #0b6a85;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+  text-transform: uppercase;
+}
+
+.tags_2 span {
+  color: #0b6a85;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+  text-transform: uppercase;
+}
+
+.questionmarkPath {
+  position: absolute;
+  top: -120px;
+  left: 300px;
+  width: 500px;
+  transform: rotate(-18deg);
+}
+
+.questionmarkPath2 {
+  position: absolute;
+  top: 30px;
+  right: 500px;
+  width: 300px;
+  transform: rotate(30deg);
+}
+
+@media only screen and (max-width: 1650px) {
+  .questionmarkPath2 {
+    position: absolute;
+    top: 30px;
+    right: 300px;
+    width: 300px;
+    transform: rotate(30deg);
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .questionmarkPath2 {
+    position: absolute;
+    top: 30px;
+    right: 200px;
+    width: 300px;
+    transform: rotate(30deg);
+  }
+
+  .questionmarkPath {
+    position: absolute;
+    top: -120px;
+    left: 150px;
+    width: 500px;
+    transform: rotate(-18deg);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .questionmarkPath2 {
+    position: absolute;
+    top: 30px;
+    right: 155px;
+    width: 250px;
+    transform: rotate(30deg);
+  }
+
+  .questionmarkPath {
+    position: absolute;
+    top: -120px;
+    left: 100px;
+    width: 400px;
+    transform: rotate(-18deg);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .questionmarkPath2 {
+    position: absolute;
+    top: 30px;
+    right: 155px;
+    width: 200px;
+    transform: rotate(30deg);
+  }
+
+  .questionmarkPath {
+    position: absolute;
+    top: -80px;
+    left: 100px;
+    width: 250px;
+    transform: rotate(-18deg);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .questionmarkPath2 {
+    top: 0;
+    left: 0;
+
+    width: 200px;
+    transform: rotate(30deg);
+  }
+
+  .questionmarkPath {
+    display: none;
+    position: absolute;
+    top: -200px;
+    right: 0;
+    left: 0;
+    transform: rotate(-18deg);
+  }
+}

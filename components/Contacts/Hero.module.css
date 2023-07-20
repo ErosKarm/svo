@@ -1,0 +1,123 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7rem;
+}
+
+.header {
+  color: #404040;
+  margin-bottom: 2rem;
+}
+
+.heroPath {
+  width: 100%;
+}
+
+.hero_contact_container {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero_contact {
+  color: #404040;
+  text-align: center;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 39px */
+}
+
+.hero_contact:nth-child(2) {
+  background-image: url("../../public/assets/images/contacts/underlinePath.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  padding-bottom: 0.75rem;
+}
+
+.furtherContacts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 17rem;
+  margin-top: 10rem;
+}
+.contactInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.contactInformation span {
+  color: #404040;
+  text-align: center;
+
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+}
+
+.contactInformationHeader {
+  background-image: url("../../public/assets/images/contacts/contactInformationUnderline.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.vatNr {
+  margin-bottom: 1.5rem;
+}
+
+.legalAddress {
+  background-image: url("../../public/assets/images/contacts/legalAddressPath.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact_actions {
+  display: flex;
+  grid-template-columns: 1fr;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.action_btn {
+  background: transparent;
+  border: none;
+  color: #0b6a85;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
+  text-transform: uppercase;
+
+  background-image: url("../../public/assets/images/contacts/actionButtonPath.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+@media only screen and (max-width: 1000px) {
+  .furtherContacts {
+    grid-template-columns: 1fr;
+    gap: 0rem;
+  }
+}

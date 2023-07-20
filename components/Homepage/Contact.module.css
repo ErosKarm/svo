@@ -1,0 +1,93 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20rem;
+  position: relative;
+  margin-bottom: -5rem;
+}
+
+.questionmarkPath {
+  position: absolute;
+  left: 70px;
+  top: -70px;
+}
+
+.questionmarkPathSM {
+  position: absolute;
+  right: 150px;
+  width: 300px;
+  top: 150px;
+}
+
+.contact_person {
+  display: flex;
+  gap: 9rem;
+}
+
+.contact_intouch {
+  margin-top: 8rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .questionmarkPath {
+    display: none;
+  }
+
+  .questionmarkPathSM {
+    display: none;
+  }
+
+  .contact_person {
+    display: flex;
+    gap: 3rem;
+  }
+}
+
+@media only screen and (max-width: 1450px) {
+  .contact {
+    padding-top: 15rem;
+  }
+
+  .questionmarkPath {
+    left: -70px;
+    width: 500px;
+    top: -70px;
+  }
+
+  .questionmarkPathSM {
+    right: 150px;
+    width: 300px;
+    top: 150px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .contact {
+    padding-top: 10rem;
+  }
+
+  .questionmarkPath {
+    left: -70px;
+    width: 500px;
+    top: -190px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .contact {
+    padding-top: 5rem;
+  }
+
+  .questionmarkPath {
+    display: none;
+    left: -70px;
+    width: 500px;
+    top: -190px;
+  }
+
+  .questionmarkPathSM {
+    display: none;
+  }
+}
