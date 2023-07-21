@@ -2,10 +2,13 @@
 
 import React, { useState } from "react";
 
+import toast, { Toaster } from "react-hot-toast";
+
 import styles from "./Popup.module.css";
 
 import { useForm } from "react-hook-form";
 import Image from "next/image";
+import { sendContactForm } from "@/services";
 
 const Popup = ({
   isOpen,
@@ -18,25 +21,46 @@ const Popup = ({
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   const handleClose = () => {
     // setIsClosed(true);
   };
 
+  const [message, setMessage] = useState("Send us a message using the form:");
+
+  const submitContact = async (data) => {
+    console.log(data);
+    const res = await sendContactForm({
+      name: data.firstName,
+      email: data.email,
+      phone: data.phone,
+      message: data.message,
+    });
+    if (res == 0) {
+      setMessage("Thank you for your valuable comment!");
+
+      toast.success("Successful");
+      reset();
+    } else {
+      setMessage("Something went wrong! Please try again");
+      toast.error("Something went wrong. Try again!");
+    }
+  };
+
   if (isOpen === true) {
     return (
       <div className={styles.wrapper}>
+        <Toaster />
         <div className={styles.form_wrapper}>
           <form
             className={styles.form}
             onSubmit={handleSubmit((data) => {
-              console.log(data);
+              submitContact(data);
             })}
           >
-            <span className={styles.form_header}>
-              Send us a message using the form:
-            </span>
+            <span className={styles.form_header}>{message}</span>
             <input
               {...register("firstName", {
                 required: true,
