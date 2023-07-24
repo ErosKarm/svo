@@ -10,96 +10,34 @@ import { useForm } from "react-hook-form";
 import Image from "next/image";
 import { sendContactForm } from "@/services";
 
+type PopupTypes = {
+  isOpen: boolean;
+  closePopup: () => void;
+  children: React.ReactNode;
+  popUpWidth?: string;
+  popUpHeight?: string;
+};
+
 const Popup = ({
   isOpen,
   closePopup,
-}: {
-  isOpen: boolean;
-  closePopup: () => void;
-}) => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm();
-
-  const handleClose = () => {
-    // setIsClosed(true);
-  };
-
-  const [message, setMessage] = useState("Send us a message using the form:");
-
-  const submitContact = async (data) => {
-    console.log(data);
-    const res = await sendContactForm({
-      name: data.firstName,
-      email: data.email,
-      phone: data.phone,
-      message: data.message,
-    });
-    if (res == 0) {
-      setMessage("Thank you for your valuable comment!");
-
-      toast.success("Successful");
-      reset();
-    } else {
-      setMessage("Something went wrong! Please try again");
-      toast.error("Something went wrong. Try again!");
-    }
-  };
-
+  children,
+  popUpHeight,
+  popUpWidth,
+}: PopupTypes) => {
   if (isOpen === true) {
     return (
       <div className={styles.wrapper}>
-        <Toaster />
-        <div className={styles.form_wrapper}>
-          <form
-            className={styles.form}
-            onSubmit={handleSubmit((data) => {
-              submitContact(data);
-            })}
-          >
-            <span className={styles.form_header}>{message}</span>
-            <input
-              {...register("firstName", {
-                required: true,
-              })}
-              placeholder="First name, Last name, Company"
-              className={styles.input}
-            />
-            <input
-              {...register("email", {
-                required: true,
-              })}
-              placeholder="Email"
-              className={styles.input}
-            />
-
-            <input
-              {...register("phone", {
-                required: true,
-              })}
-              placeholder="Phone number"
-              className={styles.input}
-            />
-
-            <textarea
-              {...register("message", {
-                required: true,
-              })}
-              className={styles.input_description}
-            />
-
-            <input type="submit" className={styles.input} />
-          </form>
-          <button onClick={handleClose}>
+        <div
+          className={styles.close_wrapper}
+          style={{ width: `${popUpWidth}`, height: `${popUpHeight}` }}
+        >
+          {children}
+          <button onClick={() => closePopup()} className={styles.close_icon}>
             <Image
               src="./assets/icons/close-icon.svg"
-              width={220}
+              width={40}
               height={40}
-              className={styles.close_icon}
-              onClick={() => closePopup()}
               alt="burger menu icon"
             />
           </button>

@@ -1,23 +1,10 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 
 import styles from "./Hero.module.css";
 import Image from "next/image";
-import Popup from "../Popup";
+import ContactActions from "./ContactActions";
 
 const Hero = () => {
-  const [openPopup, setOpenPopup] = useState(false);
-
-  const handleOpenPopup = () => {
-    console.log("this ran");
-    setOpenPopup(true);
-  };
-
-  const handleClosePopup = () => {
-    setOpenPopup(false);
-  };
-
   return (
     <section className={styles.hero}>
       <h1 className={styles.header}>Contact</h1>
@@ -37,7 +24,7 @@ const Hero = () => {
       <div className={styles.furtherContacts}>
         <div className={styles.contactInformation}>
           <span className={styles.contactInformationHeader}>
-            SIA "S.V.O Group"
+            SIA &quot;S.V.O Group&quot;
           </span>
           <span>
             <strong style={{ fontWeight: "500" }}>Registration number: </strong>
@@ -64,16 +51,8 @@ const Hero = () => {
             Ganibu dambis 24D, Riga, LV-1005, Latvia
           </span>
         </div>
-        <div className={styles.contact_actions}>
-          <button className={styles.action_btn} onClick={handleOpenPopup}>
-            Send Request
-          </button>
-          <button className={styles.action_btn}>Subscribe to newsletter</button>
-          <button className={styles.action_btn}>Request a call</button>
-        </div>
+        <ContactActions />
       </div>
-
-      <Popup isOpen={openPopup} closePopup={handleClosePopup} />
     </section>
   );
 };
