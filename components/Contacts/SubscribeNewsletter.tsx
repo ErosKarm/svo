@@ -1,12 +1,19 @@
 import React from "react";
-
 import styles from "./SubscribeNewsletter.module.css";
 import Popup from "../Popup";
 import { useForm } from "react-hook-form";
 import { sendNewsletterForm } from "@/services";
 import { Toaster, toast } from "react-hot-toast";
 
-const SubscribeNewsletter = ({ isPopupOpen, closePopUp }) => {
+type SubscribeNewsLetterTypes = {
+  isPopupOpen: boolean;
+  closePopUp: () => void;
+};
+
+const SubscribeNewsletter = ({
+  isPopupOpen,
+  closePopUp,
+}: SubscribeNewsLetterTypes) => {
   const {
     register,
     handleSubmit,
@@ -42,10 +49,9 @@ const SubscribeNewsletter = ({ isPopupOpen, closePopUp }) => {
         })}
       >
         <span className={styles.form_header}>
-          {" "}
-          Время от времени мы готовим сводки для своих постоянных клиентов,
-          чтобы они были знакомы с изменениями в законодательстве и новостями
-          мира перевозок. Напишите нам свою почту, и мы добавим вас к адресатам!
+          From time to time we prepare summaries for our regular customers, so
+          that they are familiar with changes in legislation and news the world
+          of transportation. Send us your email and we'll add you to the list!
         </span>
 
         <input
