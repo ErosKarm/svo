@@ -11,6 +11,8 @@ type SendRequestProps = {
   closePopUp: () => void;
 };
 
+type submitContactTypes = {};
+
 const SendRequest = ({ isPopupOpen, closePopUp }: SendRequestProps) => {
   const {
     register,
@@ -20,10 +22,10 @@ const SendRequest = ({ isPopupOpen, closePopUp }: SendRequestProps) => {
   } = useForm();
 
   const submitContact = async (data: {
-    email: string;
-    firstName: string;
-    message: string;
-    phone: string;
+    firstName?: string;
+    email?: string;
+    phone?: string;
+    message?: string;
   }) => {
     const res = await sendContactForm({
       name: data.firstName,
