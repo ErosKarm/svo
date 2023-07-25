@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Contact.module.css";
-import Image from "next/image";
 import Hero from "@/components/Contacts/Hero";
 import Map from "@/components/Contacts/Map";
 import ContactPerson from "@/components/Homepage/ContactPerson";
