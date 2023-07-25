@@ -45,13 +45,14 @@ const SubscribeNewsletter = ({
         className={styles.form}
         onSubmit={handleSubmit((data) => {
           console.log(data);
-          submitNewsletter(data);
+          submitNewsletter(data?.email);
         })}
       >
         <span className={styles.form_header}>
           From time to time we prepare summaries for our regular customers, so
           that they are familiar with changes in legislation and news the world
-          of transportation. Send us your email and we'll add you to the list!
+          of transportation. Send us your email and we&apos;ll add you to the
+          list!
         </span>
 
         <input

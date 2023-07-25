@@ -4,7 +4,6 @@ import styles from "./Values.module.css";
 import Number from "./Number";
 import Image from "next/image";
 
-
 const Values = () => {
   return (
     <section className={styles.values}>
@@ -12,7 +11,7 @@ const Values = () => {
 
       <div className={styles.values_1}>
         <Number degree="0deg">1</Number>
-        <h4 className={styles.values_1_heading}>We don't stand still.</h4>
+        <h4 className={styles.values_1_heading}>We don&apos;t stand still.</h4>
 
         <p className={styles.description}>
           It would seem - what can change in the process of transportation? How
@@ -22,8 +21,6 @@ const Values = () => {
           service.
         </p>
       </div>
-
-
 
       <div className={styles.values_2}>
         <div className={styles.values_1}>
@@ -57,7 +54,7 @@ const Values = () => {
         <h5 className={styles.values_headingSmall}>
           We work practically without restrictions.
         </h5>
-        <p>There is only one "but" - honesty.</p>
+        <p>There is only one &quot;but&quot; - honesty.</p>
         <p>
           So that we can help a person, he must tell us frankly about his
           situation, about the cargo, about circumstances. Even if half the

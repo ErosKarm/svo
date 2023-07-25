@@ -30,9 +30,9 @@ const Hero = () => {
             understand.
           </p>
           <p className={styles.about_notice}>
-            We'll take over everything. We will make the delivery process as
-            easy as possible for you. goods, we will explain complex things in
-            simple words, without complex terms.
+            We&apos;ll take over everything. We will make the delivery process
+            as easy as possible for you. goods, we will explain complex things
+            in simple words, without complex terms.
           </p>
         </div>
       </div>
@@ -40,8 +40,8 @@ const Hero = () => {
       <h3>Our mission is to make the complex simple</h3>
       <span className={styles.description}>
         Very often, clients in our area are faced with a wall of logistical
-        concepts. <br /> We don't build walls, we show you the path your things
-        will take.
+        concepts. <br /> We don&apos;t build walls, we show you the path your
+        things will take.
       </span>
     </section>
   );
