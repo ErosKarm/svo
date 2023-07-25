@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./Contact.module.css";
 import Hero from "@/components/Contacts/Hero";
-import Map from "@/components/Contacts/Map";
 import ContactPerson from "@/components/Homepage/ContactPerson";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("@/components/Contacts/Map"), { ssr: false });
 
 const page = () => {
   return (
