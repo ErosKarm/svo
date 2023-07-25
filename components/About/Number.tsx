@@ -12,11 +12,7 @@ const Number = ({ degree = "0deg", children }: NumberTypes) => {
     "--rotate-degree": degree, // Set the CSS variable with the degree prop value
   };
 
-  return (
-    <span className={styles.values_number} style={inlineStyle}>
-      {children}
-    </span>
-  );
+  return <span className={styles.values_number}>{children}</span>;
 };
 
 export default Number;
