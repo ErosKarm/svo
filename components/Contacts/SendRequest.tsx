@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Popup from "../Popup";
-import { useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import { sendContactForm } from "@/services";
 import { Toaster, toast } from "react-hot-toast";
 
@@ -21,12 +21,7 @@ const SendRequest = ({ isPopupOpen, closePopUp }: SendRequestProps) => {
     reset,
   } = useForm();
 
-  const submitContact = async (data: {
-    firstName?: string;
-    email?: string;
-    phone?: string;
-    message?: string;
-  }) => {
+  const submitContact = async (data: FieldValues) => {
     const res = await sendContactForm({
       name: data.firstName,
       email: data.email,
