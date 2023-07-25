@@ -9,7 +9,7 @@ const Hero = () => {
       <section className={styles.hero_section}>
         <div>
           <h1 className={styles.hero_heading}>
-            Human Relations <br /> in Transportation
+            Human Relations in Transportation
           </h1>
           <p className={styles.hero_description}>
             SVO Group - experts in the field of customs procedures. We will help

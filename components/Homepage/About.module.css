@@ -84,7 +84,6 @@
 @media only screen and (max-width: 1775px) {
   .servicesPath {
     height: 690px;
-    width: 100%;
     top: -170px;
     left: -470px;
   }
@@ -93,7 +92,6 @@
 @media only screen and (max-width: 1650px) {
   .servicesPath {
     height: 650px;
-    width: 100%;
     top: -160px;
     left: -430px;
   }
@@ -102,7 +100,6 @@
 @media only screen and (max-width: 1500px) {
   .servicesPath {
     height: 620px;
-    width: 100%;
     top: -130px;
     left: -400px;
   }
@@ -111,7 +108,6 @@
 @media only screen and (max-width: 1400px) {
   .servicesPath {
     height: 570px;
-    width: 100%;
     top: -120px;
     left: -380px;
   }
@@ -120,8 +116,30 @@
 @media only screen and (max-width: 1300px) {
   .servicesPath {
     height: 530px;
-    width: 100%;
     top: -100px;
     left: -330px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .features {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .features div:nth-child(2) {
+    margin-top: 0rem;
+  }
+
+  .features div:nth-child(4) {
+    margin-top: 0rem;
+  }
+
+  .features div:nth-child(3) {
+    margin-top: 0rem;
+  }
+
+  .forklift {
+    bottom: -350px;
   }
 }

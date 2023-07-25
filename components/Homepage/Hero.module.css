@@ -23,8 +23,11 @@
   justify-content: center;
 }
 .hero_image {
-  width: 600px;
-  height: 600px;
+  /* width: 600px;
+  height: 600px; */
+
+  width: 85%;
+  height: 85%;
 }
 
 .tags {
@@ -107,5 +110,26 @@
 
   .hero_description {
     width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero_section {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero_image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tags {
+    margin-top: -5rem;
+  }
+
+  .hero_heading {
+    font-size: 32px;
   }
 }
