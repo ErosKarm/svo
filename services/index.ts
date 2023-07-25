@@ -34,7 +34,9 @@ type sendNewsletterFormTypes = {
   email: string;
 };
 
-export const sendNewsletterForm = async ({ email }: sendContactFormTypes) => {
+export const sendNewsletterForm = async ({
+  email,
+}: sendNewsletterFormTypes) => {
   try {
     const ref = collection(firestore, "newsletters");
     await addDoc(ref, {
