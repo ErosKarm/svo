@@ -1,7 +1,19 @@
 import { addDoc, collection, Timestamp } from "firebase/firestore/lite";
 import { firestore } from "@/firebaseConfig";
 
-export const sendContactForm = async ({ name, email, phone, message }) => {
+type sendContactFormTypes = {
+  name: string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
+export const sendContactForm = async ({
+  name,
+  email,
+  phone,
+  message,
+}: sendContactFormTypes) => {
   try {
     const ref = collection(firestore, "contact");
     await addDoc(ref, {
@@ -18,7 +30,11 @@ export const sendContactForm = async ({ name, email, phone, message }) => {
   }
 };
 
-export const sendNewsletterForm = async ({ email }) => {
+type sendNewsletterFormTypes = {
+  email: string;
+};
+
+export const sendNewsletterForm = async ({ email }: sendContactFormTypes) => {
   try {
     const ref = collection(firestore, "newsletters");
     await addDoc(ref, {
