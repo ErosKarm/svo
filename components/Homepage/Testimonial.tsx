@@ -3,7 +3,13 @@ import React from "react";
 import styles from "./Testimonial.module.css";
 import Image from "next/image";
 
-const Testimonial = ({ name, image, children }) => {
+type TestimonialTypes = {
+  name: string;
+  image: string;
+  children?: React.ReactNode;
+};
+
+const Testimonial = ({ name, image, children }: TestimonialTypes) => {
   return (
     <div className={styles.testimonial}>
       <div className={styles.header}>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
-const NavPopup = ({ handleClose }) => {
+const NavPopup = ({ handleClose }: { handleClose: () => void }) => {
   const pathname = usePathname();
   return (
     <div className={styles.container}>
